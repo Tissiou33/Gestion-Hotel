@@ -1,0 +1,60 @@
+LISTE DES FONCTIONNALITE
+
+1-CLIENT
+    1- Connexion/Inscription
+    2-Reservation de chambre
+    3-Reservation de salle
+    4-Consultation des Reservation 
+    5-Voir le menu du jour
+    6-deconnexion
+
+2-Receptionniste
+    1-Connexion
+    2-Enregistrer un Client 
+    3-Enrégistrer une chambre
+    4-Voir les informations d'une chambre
+    5-Rechercher un client
+    6-Reserver une chambre (Ajout , modification)
+    7-Reserver une salle (Ajout , modification)
+    8-Consulter menus (plat disponible dans le restaurant)
+    9-Consulter des boissons
+    10-Imprimer reçu pdf
+    11-Consulter les objets perdus
+    12-Ajouter des objets perdus
+    13-Deconnexion
+
+3-Personnel d'entretien
+    1-Connexion
+    2-Consulter les chambre à maintenir
+    3-Valider l'entretien
+    4-Deconnexion
+
+4-Restaurant 
+    1-Connexion
+    2-Consulter les reservation en cours 
+    3-Valider une reservation
+    4-Consulter les reservation des clients logés
+    5-Mettre le menu du jours
+    6-Deconnexion
+
+5- Admin
+    1-Consulter tous les clients 
+    2-Consulter toutes les chambres
+    3-Consulter les reservations
+    4-Consulter la présence des employes
+    5-Consulter les objets perdus
+    6-Modifier un objets perdu
+    7-Ajouter un objet perdu 
+    8-Consulter les payement
+    9-Consulter toutes les opérations effectué
+    10-Consulter les plats
+    11-Ajouter les plats
+    12-Consulter les boissons
+    13-Ajouter les boissons
+    14-Consulter le statut des menus
+    15-Ajouter une Promotions
+    16-Deconnecter un Receptionniste
+    17-Afficher la recette réalisé entre deux date
+    18-Consulter la recette total
+    19-Créer un client
+    20-Deconnexion

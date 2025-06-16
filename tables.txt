@@ -1,0 +1,38 @@
+CREATE TABLE client (
+    client_id SERIAL PRIMARY KEY, -- Identifiant unique du client
+    nom VARCHAR(100) NOT NULL, -- Nom du client
+    prenom VARCHAR(100) NOT NULL, -- Prénom du client
+    email VARCHAR(255) UNIQUE, -- Email du client (unique)
+    numero VARCHAR(20), -- Numéro de téléphone du client
+    telephone VARCHAR(20), -- Autre numéro de téléphone (optionnel)
+    adresse TEXT, -- Adresse du client
+    type_papier VARCHAR(20) CHECK (type_papier IN ('CNI', 'Passeport', 'Permis')), -- Type de papier (CNI, Passeport, Permis)
+    numero_papier VARCHAR(50) UNIQUE, -- Numéro du papier (unique)
+    date_debut DATE NOT NULL DEFAULT CURRENT_DATE -- Date de début (par défaut la date actuelle)
+);
+
+CREATE TABLE payement (
+    payement_id SERIAL PRIMARY KEY,
+    table_concerné VARCHAR(50) NOT NULL, -- 'reservation_chambre' ou 'reservation_salle'
+    chambre_id INT NOT NULL, -- ID de la chambre ou de la salle
+    client_id INT NOT NULL, -- ID du client
+    type_payement VARCHAR(50) NOT NULL, -- Type de paiement
+    prix_total DECIMAL(10, 2) NOT NULL, -- Prix total
+    FOREIGN KEY (client_id) REFERENCES clients(client_id) -- Pas de ON DELETE CASCADE
+);
+
+ALTER TABLE reservation_chambre
+ADD COLUMN taxe DECIMAL(10, 2) DEFAULT NULL,
+ADD COLUMN reduction DECIMAL(3, 2) CHECK (reduction BETWEEN 0 AND 1),
+ADD COLUMN prix_finale DECIMAL(10, 2),
+ADD COLUMN type_paiement ENUM('Virement', 'Espèce', 'Crypto');
+
+CREATE TABLE chambre (
+    chambre_id VARCHAR(10) PRIMARY KEY,
+    numero INT NOT NULL,
+    etage INT NOT NULL,
+    type_chambre_id INT REFERENCES type_chambre(type_chambre_id),
+    statut VARCHAR(20) CHECK (statut IN ('occupée', 'vaccant', 'maintenance'))
+);
+
+
