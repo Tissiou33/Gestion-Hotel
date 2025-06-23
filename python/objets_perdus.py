@@ -87,8 +87,8 @@ class FenetreObjetsPerdus:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='******',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute(
@@ -110,8 +110,8 @@ class FenetreObjetsPerdus:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('SELECT * FROM objet_perdus')
@@ -142,7 +142,7 @@ class FenetreObjetsPerdus:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
+                    password='******',
                     database='Gestion_Reservation'
                 )
                 con_cursor = conn.cursor()
@@ -171,8 +171,8 @@ class FenetreObjetsPerdus:
                     conn = psycopg2.connect(
                         host='localhost',
                         user='postgres',
-                        password='DAMALI@\@2025',
-                        database='Gestion_Reservation'
+                        password='******',
+                        database='GestionReservation'
                     )
                     con_cursor = conn.cursor()
                     con_cursor.execute('DELETE FROM objet_perdus WHERE id_objet=%s', (self.var_objet_id.get(),))
