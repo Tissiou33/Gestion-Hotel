@@ -75,8 +75,8 @@ class FenetreLog:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('SELECT * FROM log')
@@ -107,8 +107,8 @@ class FenetreLog:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute("SELECT * FROM log WHERE operation_time::date = %s", (date_recherche,))
