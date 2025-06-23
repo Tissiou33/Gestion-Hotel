@@ -12,9 +12,9 @@ class FenetreChambre:
         # Variables
         self.var_chambre_id = StringVar()
         self.var_numero = StringVar()
-        self.var_type_chambre_id = StringVar()  # Nouveau champ pour le type de chambre (entier)
-        self.var_etage = StringVar()  # Nouveau champ pour l'étage
-        self.var_statut = StringVar()  # Nouveau champ pour le statut
+        self.var_type_chambre_id = StringVar()  #champ pour le type de chambre (entier)
+        self.var_etage = StringVar()  # champ pour l'étage
+        self.var_statut = StringVar()  # champ pour le statut
 
         # Titre
         titre = Label(self.root, text='GESTION DES CHAMBRES', font=('times new roman', 18, 'bold'), fg='gold', bg='black', bd=4, relief=RIDGE)
@@ -39,7 +39,7 @@ class FenetreChambre:
         lbl_type_chambre.grid(row=1, column=0, padx=10, pady=10)
         self.combo_type_chambre = ttk.Combobox(saisie_frame, textvariable=self.var_type_chambre_id, font=('times new roman', 12), state='readonly')
         # Remplir le Combobox avec les IDs de type_chambre (entiers)
-        self.combo_type_chambre['values'] = self.get_type_chambre_ids()  # Récupérer les IDs de la base de données
+        self.combo_type_chambre['values'] = self.get_type_chambre_ids()  # Récupére les IDs de la base de données
         self.combo_type_chambre.grid(row=1, column=1, padx=10, pady=10)
         self.combo_type_chambre.current(0)
 
@@ -114,8 +114,8 @@ class FenetreChambre:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('SELECT type_chambre_id FROM type_chambre')
@@ -140,8 +140,8 @@ class FenetreChambre:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='******',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute(
@@ -165,8 +165,8 @@ class FenetreChambre:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('''
@@ -208,8 +208,8 @@ class FenetreChambre:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='******',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute(
@@ -239,8 +239,8 @@ class FenetreChambre:
                     conn = psycopg2.connect(
                         host='localhost',
                         user='postgres',
-                        password='DAMALI@\@2025',
-                        database='Gestion_Reservation'
+                        password='******',
+                        database='GestionReservation'
                     )
                     con_cursor = conn.cursor()
                     con_cursor.execute('DELETE FROM chambre WHERE chambre_id=%s', (self.var_chambre_id.get(),))
