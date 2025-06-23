@@ -17,7 +17,7 @@ class SystemeGestionHotel:
         self.root.title('Système de Gestion Hôtelière')
         self.root.geometry('1550x800+0+0')
 
-        # Chemin des images (à adapter selon ton projet)
+        # Chemin des images (à adapter )
         self.image_paths = {
             'hotel1': 'hotel1.jpg',
             'hotel2': 'hotel2.jpg',
@@ -105,7 +105,7 @@ class SystemeGestionHotel:
             labelimg2 = Label(main_frame, text="Image hotel3.jpg manquante", bd=4, relief=RIDGE, fg='red')
             labelimg2.place(x=225, y=0, width=1310, height=590)
         
-        # Down Image 1 (en bas à gauche)
+        #  Image 1 (en bas à gauche)
         if self.image_paths['hotel4']:
             img4 = Image.open(self.image_paths['hotel4'])
             img4 = img4.resize((230, 210), Image.LANCZOS)
@@ -116,7 +116,7 @@ class SystemeGestionHotel:
             labelimg3 = Label(main_frame, text="Image hotel4.jpg manquante", bd=4, relief=RIDGE, fg='red')
             labelimg3.place(x=0, y=225, width=230, height=210)
        
-        # Down Image 2 (en bas à gauche)
+        #  Image 2 (en bas à gauche)
         if self.image_paths['hotel5']:
             img5 = Image.open(self.image_paths['hotel5'])
             img5 = img5.resize((230, 190), Image.LANCZOS)
@@ -152,8 +152,8 @@ class SystemeGestionHotel:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('SELECT * FROM plat')
@@ -169,8 +169,8 @@ class SystemeGestionHotel:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('SELECT * FROM boisson')
