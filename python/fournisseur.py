@@ -100,8 +100,8 @@ class FenetreFournisseur:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='******',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute(
@@ -125,8 +125,8 @@ class FenetreFournisseur:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('SELECT * FROM fournisseur')
@@ -159,8 +159,8 @@ class FenetreFournisseur:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='******',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute(
@@ -190,8 +190,8 @@ class FenetreFournisseur:
                     conn = psycopg2.connect(
                         host='localhost',
                         user='postgres',
-                        password='DAMALI@\@2025',
-                        database='Gestion_Reservation'
+                        password='******',
+                        database='GestionReservation'
                     )
                     con_cursor = conn.cursor()
                     con_cursor.execute('DELETE FROM fournisseur WHERE fournisseur_id=%s', (self.var_fournisseur_id.get(),))
