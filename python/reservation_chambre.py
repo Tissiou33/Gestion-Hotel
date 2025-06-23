@@ -168,8 +168,8 @@ class FenetreReservationChambre:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
 
@@ -200,8 +200,8 @@ class FenetreReservationChambre:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('''
@@ -248,8 +248,8 @@ class FenetreReservationChambre:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute('''
@@ -347,8 +347,8 @@ class FenetreReservationChambre:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute(
@@ -383,8 +383,8 @@ class FenetreReservationChambre:
                     conn = psycopg2.connect(
                         host='localhost',
                         user='postgres',
-                        password='DAMALI@\@2025',
-                        database='Gestion_Reservation'
+                        password='',
+                        database='GestionReservation'
                     )
                     con_cursor = conn.cursor()
                     con_cursor.execute('DELETE FROM reservation_chambre WHERE reservation_id=%s', (self.var_reservation_id.get(),))
