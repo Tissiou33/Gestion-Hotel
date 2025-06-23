@@ -94,8 +94,8 @@ class FenetreFeedback:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='******',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute(
@@ -118,8 +118,8 @@ class FenetreFeedback:
             conn = psycopg2.connect(
                 host='localhost',
                 user='postgres',
-                password='DAMALI@\@2025',
-                database='Gestion_Reservation'
+                password='******',
+                database='GestionReservation'
             )
             con_cursor = conn.cursor()
             con_cursor.execute('SELECT * FROM feedback')
@@ -151,8 +151,8 @@ class FenetreFeedback:
                 conn = psycopg2.connect(
                     host='localhost',
                     user='postgres',
-                    password='DAMALI@\@2025',
-                    database='Gestion_Reservation'
+                    password='******',
+                    database='GestionReservation'
                 )
                 con_cursor = conn.cursor()
                 con_cursor.execute(
@@ -181,8 +181,8 @@ class FenetreFeedback:
                     conn = psycopg2.connect(
                         host='localhost',
                         user='postgres',
-                        password='DAMALI@\@2025',
-                        database='Gestion_Reservation'
+                        password='******',
+                        database='GestionReservation'
                     )
                     con_cursor = conn.cursor()
                     con_cursor.execute('DELETE FROM feedback WHERE feedback_id=%s', (self.var_feedback_id.get(),))
